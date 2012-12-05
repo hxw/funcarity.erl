@@ -1,0 +1,13 @@
+%% -*- mode: erlang -*-
+
+{application, funcarity,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [kernel,
+                  stdlib,
+                  compiler]},
+  {mod, {teamail_app, []}},
+  {env, []}
+ ]}.
