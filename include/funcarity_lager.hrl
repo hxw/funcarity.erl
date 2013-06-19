@@ -13,8 +13,8 @@
 
 %% logging macros
 
--define(DEBUG(Term), lager:debug("~ts:~ts/~p ~p", [?MODULE, ?FUNCTION, ?ARITY, Term])).
--define(ERROR(Term), lager:error("~ts:~ts/~p ~p", [?MODULE, ?FUNCTION, ?ARITY, Term])).
+-define(DEBUG(Term), lager:log(debug, self(), "~ts:~ts/~p ~p", [?MODULE, ?FUNCTION, ?ARITY, Term])).
+-define(ERROR(Term), lager:log(error, self(), "~ts:~ts/~p ~p", [?MODULE, ?FUNCTION, ?ARITY, Term])).
 -define(INFO(Term), lager:log(info, self(), "~ts:~ts/~p ~p", [?MODULE, ?FUNCTION, ?ARITY, Term])).
 
 -endif.
